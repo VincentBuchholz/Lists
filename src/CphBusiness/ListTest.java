@@ -40,4 +40,14 @@ class ListTest {
         assertEquals("1234", list.printNodesFromHead());
     }
 
+    @Test
+    void printNodesFromTail(){
+        list.insertFromHead(new Node("1"));
+        list.insertFromHead(new Node("2"));
+        list.insertFromHead(new Node("3"));
+        list.insertFromHead(new Node("4"));
+
+        assertEquals("1234", list.printNodesFromTail());
+    }
+
 }

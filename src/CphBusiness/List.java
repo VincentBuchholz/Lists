@@ -41,4 +41,18 @@ public class List {
         }
         return res;
     }
+
+
+    public String printNodesFromTail(){
+        Node node = this.tail;
+
+        String res = "";
+
+        while (node != null){
+            res = res + node.name;
+            node = node.prev;
+        }
+        return res;
+    }
+
 }
