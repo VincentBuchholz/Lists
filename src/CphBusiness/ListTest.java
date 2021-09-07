@@ -18,4 +18,14 @@ class ListTest {
         assertEquals("Thomas", list.insertFromHead(node1).name);
     }
 
+    @Test
+    void insertFromTail(){
+        Node node = new Node("Vincent");
+        Node node1 = new Node("Thomas");
+
+
+        assertEquals("Vincent", list.insertFromTail(node).name);
+        assertEquals("Thomas", list.insertFromTail(node1).name);
+    }
+
 }

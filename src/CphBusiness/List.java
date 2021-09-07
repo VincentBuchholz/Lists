@@ -16,4 +16,17 @@ public class List {
             return head;
         }
     }
+
+    public Node insertFromTail(Node node) {
+        if (head == null){
+            head = node;
+            tail = node;
+            return head;
+        }
+        else {
+            tail.next = node;
+            tail = node;
+            return tail;
+        }
+    }
 }
