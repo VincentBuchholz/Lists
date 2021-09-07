@@ -50,4 +50,22 @@ class ListTest {
         assertEquals("1234", list.printNodesFromTail());
     }
 
+    @Test
+    void removeFromHead(){
+        assertEquals(null, list.removeFromHead());
+
+
+        Node node = new Node("1");
+        list.insertFromHead(node);
+
+        assertEquals(node, list.removeFromHead());
+
+
+        Node node1 = new Node("2");
+        list.insertFromHead(node1);
+
+        assertEquals(node1, list.removeFromHead());
+
+    }
+
 }

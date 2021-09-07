@@ -12,6 +12,7 @@ public class List {
         }
         else {
             head.prev = node;
+            node.next = head;
             head = node;
             return head;
         }
@@ -53,6 +54,22 @@ public class List {
             node = node.prev;
         }
         return res;
+    }
+
+    public Node removeFromHead(){
+
+        if (head == null){
+            return null;
+        }
+        if (head == tail){
+            return head;
+        }
+
+        Node removed = head;
+        head.next.prev = null;
+        head = head.next;
+
+        return removed;
     }
 
 }
