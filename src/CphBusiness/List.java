@@ -72,4 +72,19 @@ public class List {
         return removed;
     }
 
+    public Node removeFromTail(){
+        if (head == null){
+            return null;
+        }
+        if (head == tail){
+            return head;
+        }
+        Node removed = tail;
+
+        tail.prev.next = null;
+        tail = tail.prev;
+
+        return removed;
+    }
+
 }

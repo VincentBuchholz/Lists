@@ -68,4 +68,21 @@ class ListTest {
 
     }
 
+    @Test
+    void removeFromTail(){
+        assertEquals(null, list.removeFromTail());
+
+
+        Node node = new Node("1");
+        list.insertFromHead(node);
+
+        assertEquals(node, list.removeFromTail());
+
+
+        Node node1 = new Node("2");
+        list.insertFromHead(node1);
+
+        assertEquals(node, list.removeFromTail());
+    }
+
 }
