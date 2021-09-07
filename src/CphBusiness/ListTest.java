@@ -28,4 +28,16 @@ class ListTest {
         assertEquals("Thomas", list.insertFromTail(node1).name);
     }
 
+    @Test
+    void printNodesFromHead(){
+        list.insertFromTail(new Node("1"));
+        list.insertFromTail(new Node("2"));
+        list.insertFromTail(new Node("3"));
+        list.insertFromTail(new Node("4"));
+
+
+
+        assertEquals("1234", list.printNodesFromHead());
+    }
+
 }

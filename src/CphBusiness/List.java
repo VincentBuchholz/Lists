@@ -29,4 +29,16 @@ public class List {
             return tail;
         }
     }
+
+    public String printNodesFromHead(){
+        Node node = this.head;
+
+        String res = "";
+
+        while (node != null){
+            res = res + node.name;
+            node = node.next;
+        }
+        return res;
+    }
 }
